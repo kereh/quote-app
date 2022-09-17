@@ -1,4 +1,5 @@
 import { trpc } from "src/utils/trpc"
+import Head from "next/head"
 
 export default function index() {
 
@@ -7,6 +8,11 @@ export default function index() {
 
     return (
         <div className="container mx-auto p-4">
+            <Head>
+                <title>
+                    Random quote generator | Next.js
+                </title>
+            </Head>
             <div className="grid place-content-center h-screen">
                 <figure className="p-4 border rounded-lg shadow-lg w-96">
                     <blockquote>
