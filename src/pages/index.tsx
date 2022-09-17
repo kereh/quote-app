@@ -18,7 +18,7 @@ export default function index() {
                         <p className="text-lg font-medium text-gray-700">
                             {quote?.content && (
                                 <div>
-                                    "{quote.content}"
+                                    {quote.content}
                                 </div>
                             )}
                         </p>
