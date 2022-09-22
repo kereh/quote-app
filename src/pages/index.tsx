@@ -7,13 +7,13 @@ export default function index() {
     const {data:quote} = trpc.useQuery(['quote.getRandomQuote'])
 
     return (
-        <div className="container mx-auto p-4 h-full">
+        <div className="container mx-auto p-4 h-full overflow-y-hidden">
             <Head>
                 <title>
                     Random quote generator | Next.js
                 </title>
             </Head>
-            <div className="sm:grid sm:place-content-center sm:h-64 grid place-content-center">
+            <div className="sm:grid sm:place-content-center sm:mt-36 grid place-content-center">
                 <figure className="p-4 sm:border sm:rounded-lg sm:shadow-lg w-96">
                     <blockquote>
                         {!quote && (
@@ -32,7 +32,7 @@ export default function index() {
                     {!quote 
                         ? "" 
                         :   <div>
-                                <figcaption className="mt-4 block text-left">
+                                <figcaption className="mt-12 block text-left">
                                     <span className="mt-4">Quote by <span className="italic">{quote.author}</span></span>
                                 </figcaption>
                                 <div className="mt-4 text-center">

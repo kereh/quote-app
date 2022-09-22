@@ -8,7 +8,15 @@ import type { AppRouter } from "src/server/router";
 import "src/styles/globals.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Component {...pageProps} />
+      <footer className="bg-gray-700 text-white mt-auto p-2 flex justify-between">
+        <p className="italic text-base">Created by Kereh</p>
+        <a className="text-sky-500 cursor-pointer" href="https://github.com/kereh/quote-app">Get Source Code</a>
+      </footer>
+    </div>
+  );
 };
 
 const getBaseUrl = () => {
