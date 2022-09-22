@@ -14,16 +14,16 @@ export default function index() {
                 </title>
             </Head>
             <div className="grid place-content-center h-screen">
-                <figure className="p-4 border rounded-lg shadow-lg w-96">
+                <figure className="p-4 sm:border sm:rounded-lg sm:shadow-lg w-96">
                     <blockquote>
                         {!quote && (
                             <p className="text-center italic">
                                 Please wait...
                             </p>
                         )}
-                        <p className="text-lg font-medium text-gray-700">
+                        <p className="text-lg font-medium text-gray-900">
                             {quote?.content && (
-                                <div>
+                                <div className="text-left sm:text-center">
                                     {quote.content}
                                 </div>
                             )}
@@ -31,10 +31,19 @@ export default function index() {
                     </blockquote>
                     {!quote 
                         ? "" 
-                        :   <figcaption className="mt-4 flex justify-between">
-                                <span className="italic">{quote?.author}</span> 
-                                <span className="underline cursor-pointer" onClick={() => client.invalidateQueries('quote.getRandomQuote')}>Next</span>
-                            </figcaption>
+                        :   <div>
+                                <figcaption className="mt-4 block text-left">
+                                    <span className="mt-4">Quote by <span className="italic">{quote.author}</span></span>
+                                </figcaption>
+                                <div className="mt-4 text-center">
+                                    <button 
+                                        className="p-2 border rounded-lg bg-slate-900 text-white w-full"
+                                        onClick={() => client.invalidateQueries('quote.getRandomQuote')}
+                                    >
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
                     }
                 </figure>
             </div>
