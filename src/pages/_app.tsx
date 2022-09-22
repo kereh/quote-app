@@ -11,7 +11,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <div className="flex flex-col min-h-screen">
       <Component {...pageProps} />
-      <footer className="bg-gray-700 text-white mt-auto p-2 flex justify-between">
+      <footer className="bg-gray-700 text-white mt-auto p-2 flex justify-between w-full">
         <p className="italic text-base">Created by Kereh</p>
         <a className="text-sky-500 cursor-pointer" href="https://github.com/kereh/quote-app">Get Source Code</a>
       </footer>
