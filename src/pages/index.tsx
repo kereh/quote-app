@@ -7,7 +7,7 @@ export default function index() {
     const {data:quote} = trpc.useQuery(['quote.getRandomQuote'])
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-4 h-full">
             <Head>
                 <title>
                     Random quote generator | Next.js
