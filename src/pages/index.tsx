@@ -13,7 +13,7 @@ export default function index() {
                     Random quote generator | Next.js
                 </title>
             </Head>
-            <div className="sm:grid sm:place-content-center sm:h-64">
+            <div className="sm:grid sm:place-content-center sm:h-64 grid place-content-center">
                 <figure className="p-4 sm:border sm:rounded-lg sm:shadow-lg w-96">
                     <blockquote>
                         {!quote && (
