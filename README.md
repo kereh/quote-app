@@ -11,10 +11,12 @@ This is an app bootstrapped according to the [init.tips](https://init.tips) stac
 
 ### localhost
 
-- git clone https://github.com/kereh/quote-app
-- cd quote-app
-- pnpm install
-- pnpm run dev
+```bash
+git clone https://github.com/kereh/quote-app
+cd quote-app
+pnpm install
+pnpm run dev
+```
 
 ### Vercel
 
